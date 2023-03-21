@@ -12,7 +12,7 @@
 
 <script>
 import NavBar from './components/NavBar.vue';
-
+import { useRouter } from 'vue-router';
 import { authenticate } from './services/AuthenticateLogn';
 
 
@@ -21,11 +21,11 @@ export default {
   name: 'App',
   created() {
     this.user=authenticate()
-    
+    this.router = useRouter()
     if(this.user=== null){
-      console.log(this.user)
-    }
     
+      this.router.push('/')
+    }
     
   },
   components: {

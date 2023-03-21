@@ -100,7 +100,7 @@ export default{
     setup(){
        const router = useRouter()
        function updatetask(id){
-        router.push("/updatetask/"+id)
+        router.push("/home/updatetask/"+id)
         
                  
        }
